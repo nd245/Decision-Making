@@ -1,0 +1,88 @@
+/* function Leap Year Checker */
+
+FUNCTION isLeapYear(year): BOOLEAN
+
+
+BEGIN
+        IF(year % 4 = 0 && year % 100 != 0 || year % 400 === 0) THEN 
+        
+                RETURN true;
+            
+         ELSE 
+                RETURN false;
+END
+
+
+
+
+/* function Ticket Pricing */
+
+FUNCTION TicketPricing(age): STRING
+            VAR
+                res : STRING
+BEGIN       
+        SWITCH (age) DO
+            case (age <= 12) : return res = "$10" ;
+            break;
+            case (age >=13 && age<=17) : return res = "$15";
+             break;
+           default : return res = "$20";
+            
+        END_SWITCH
+END 
+
+
+
+/* function Weather Clothing Adviser */
+
+
+
+
+
+
+
+/* Fibonacci Sequence function */
+
+FUNCTION fibonacci(n): INTEGER
+        VAR 
+            res : INTEGER
+BEGIN
+            IF (n <= 1) THEN
+                RETURN res = n ;
+            ELSE
+                RETURN res = fibonacci(n - 1) + fibonacci(n - 2);
+            END_IF
+END
+
+
+
+
+// function  Palindrome Checker 
+FUNCTION IsPalindrome (str , left:0, right:str.length-1) : BOOLEAN
+VAR
+    RES : BOOLEAN
+BEGIN
+    IF (str[left] != str[right]) THEN
+    RETURN false;
+    IF ELSE (left < right) THEN
+        IF(str[left] == str[right])THEN
+            IsPalindrome (str,++left,--right)
+        END_IF
+    END_IF
+    RETURN res = true;
+END
+
+
+// fuction Power Function
+
+
+FUNCTION Power(x,n: INTEGER):INTEGER
+BEGIN
+    IF(n=1)THEN
+    RETURN X;
+    ELSE
+    RETURN x*Power(x,n-1);
+    END_IF
+END
+
+
